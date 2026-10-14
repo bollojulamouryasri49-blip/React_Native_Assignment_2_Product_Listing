@@ -1,56 +1,95 @@
-# Welcome to your Expo app 👋
+# React Native Assignment 2 – Product Listing
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Project Description
+This project is an e-commerce mobile application developed using React Native and Expo. It demonstrates reusable components, product listing, FlatList, and mobile-friendly styling.
 
-## Get started
+## Features
+- Displays at least 8 sample products.
+- Shows product images, names, prices, and categories.
+- Uses a reusable ProductCard component.
+- Uses FlatList to display products efficiently.
+- Uses unique product IDs with keyExtractor.
+- Provides touch interaction when a product is selected.
+- Displays a friendly message when no products are available.
+- Uses local sample data without connecting to backend APIs.
 
-1. Install dependencies
+## Technologies Used
+- React Native
+- Expo
+- JavaScript
+- Expo Router
 
-   ```bash
-   npm install
-   ```
+## Project Structure
 
-2. Start the app
+- `src/app/` – Application screens and routes
+- `src/components/ProductCard.tsx` – Reusable product card component
+- `src/data/products.js` – Sample product data
+- `assets/` – Images and other static assets
 
-   ```bash
-   npx expo start
-   ```
+## Getting Started
 
-In the output, you'll find options to open the app in a
+### Prerequisites
+Install Node.js and npm before running the project.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+### Installation
+Open the terminal in the project directory and run:
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Start the Application
+Run:
 
-### Other setup steps
+```bash
+npx expo start
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+Follow the terminal instructions to open the application on a compatible device or emulator.
 
-## Learn more
+## Key Concepts Learned
+- Creating reusable React Native components
+- Passing data through props
+- Rendering lists using FlatList
+- Using keyExtractor with unique IDs
+- Styling components with StyleSheet and Flexbox
+- Handling touch interactions with Pressable
+- Separating sample data from UI components
 
-To learn more about developing your project with Expo, look at the following resources:
+## Assignment Details
+**Assignment:** React Native – Assignment 2  
+**Topic:** Reusable Components, Product Listing & FlatList  
+**Project:** E-Commerce Mobile App
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Screenshot
 
-## Join the community
+### Product Listing Screen
 
-Join our community of developers creating universal apps.
+![Product Listing Screen](./screenshots/product-listing.jpg)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## Research Questions
+
+**1. Why use FlatList instead of ScrollView?**
+
+FlatList efficiently renders list items and is suitable for lists containing many products. ScrollView renders all its children at once.
+
+**2. Why is keyExtractor important?**
+
+keyExtractor provides a unique key for each list item, helping React identify items when the list changes.
+
+**3. Why should product IDs be unique?**
+
+Unique IDs help React identify each product correctly and prevent key-related rendering issues.
+
+**4. What is the difference between props and state?**
+
+Props pass data from a parent component to a child component. State stores data that a component manages and can update.
+
+**5. Why separate data from UI components?**
+
+Separating data from UI improves code organization, readability, reuse, and maintenance.
+
+**6. Why use a two-column product grid?**
+
+A two-column grid displays more products within the available mobile screen width and makes product browsing compact.
